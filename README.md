@@ -36,3 +36,10 @@ django settings
 'rest_framework.authtoken', # django restful 的token验证功能
 'profiles_api', # 自己构建的api应用
 ```
+默认情况下是django是用username/password方式来验证用户的, 自带的user model就可以做
+但是我们采用邮箱验证的方式来做
+
+```shell
+python manage.py makemigrations profile_api
+
+```
