@@ -28,6 +28,8 @@ python manage.py startapp profiles_api
 # 运行 django server
 python manage.py runserver 0.0.0.0:8000
 
+# create super user
+python manage.py createsuperuser
 ```
 
 django settings
@@ -40,6 +42,7 @@ django settings
 但是我们采用邮箱验证的方式来做
 
 ```shell
-python manage.py makemigrations profile_api
+python manage.py makemigrations profiles_api # 拟定数据库构建方法
+python manage.py migarte # 按照上一步制定的方法来构建数据库的模型表格
 
 ```

@@ -20,14 +20,14 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
-    def create_super(self, email, name, password=None):
+    def create_superuser(self, email, name, password=None):
         """Create a new super with given details"""
         user = self.create_user(email, name, password)
         user.is_superuser = True
         user.is_staff = True
         user.save(using=self._db)
 
-        return
+        return user
 
 
 
@@ -42,7 +42,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     # 我们自己定了用户模型后, 就需要告诉django-cli怎么和我们的模型打交道
     objects = UserProfileManager()
     USERNAME_FIELD = 'email' # 我们用 email 字段替换了默认的username字段
-    REQUIRED_FIELD = ['name'] # 制定了哪些字段是必须字段
+    REQUIRED_FIELDS = ['name'] # 制定了哪些字段是必须字段
 
     def get_full_name(self):
         """Retrieve full name of user"""
