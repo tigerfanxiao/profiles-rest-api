@@ -9,6 +9,7 @@ vagrant init ubuntu/bionic64
 vagrant up # 拉起虚拟机
 vagrant ssh # 进入虚拟机
 cd /vagrant # 进入host和虚拟机的共享目录
+vagrant halt # 终止vm
 ```
 
 # create python virtual environment
