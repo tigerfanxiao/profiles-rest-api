@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+# set -e # exit if any error occurs
 
 # TODO: Set to URL of git repo.
 PROJECT_GIT_URL='https://github.com/tigerfanxiao/profiles-rest-api.git'
